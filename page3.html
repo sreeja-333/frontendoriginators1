@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <style>
+        .slowFade {
+    display: flex;
+   margin-left: 170px;
+    background: #fff;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+.slowFade .slide img {
+    position: absolute;
+    min-width: 75%;
+    min-height: 55%;
+    height: 200px;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    opacity: 0;
+    transform: scale(1.5) rotate(15deg);
+    -webkit-animation: slowFade 32s infinite;
+            animation: slowFade 32s infinite;
+}
+.slowFade .slide:nth-child(3) img {
+    -webkit-animation-delay: 8s;
+            animation-delay: 8s;
+}
+.slowFade .slide:nth-child(2) img {
+    -webkit-animation-delay: 16s;
+            animation-delay: 16s;
+}
+.slowFade .slide:nth-child(1) img {
+    -webkit-animation-delay: 24s;
+            animation-delay: 24s;
+}
+@keyframes slowFade {
+    25% {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+    40% {
+        opacity: 0;
+    }
+}
+@-webkit-keyframes slowFade {
+    25% {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+    40% {
+        opacity: 0;
+    }
+}
+        button{
+            background-color: white;
+            width: 40%;
+            height: 57px;
+            border-radius: 90px;
+            display: block;
+            background-color: rgb(16,133,243);
+            border:0;
+            margin-top: 6px;
+            cursor:pointer;
+        }
+        button a{
+            color:white;
+            text-decoration: none;
+            font-size:25px;
+        }
+        
+        .btn2{
+            margin-bottom:5px;
+        }
+        .container{
+            margin-top:10px;
+            width:1200px;
+            height:750px;
+            border: 6px solid black;
+            border-radius: 10px;
+        }
+        button:hover {
+            background-color: rgb(194, 191, 191);
+        }
+        button a:hover{
+            color:rgb(16,133,243);
+            text-decoration: none;
+        }
+        .btn1{
+            margin-top:-1px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div class="container">
+            <img src="vishnulogo.png" alt="">
+            <div class="slides slowFade">
+                <div class="slide">
+                    <img src="slide1.jpg" alt="img"/>
+                </div>
+                <div class="slide">
+                    <img src="slide2.png" alt="img"/>
+                </div>
+                <div class="slide">
+                    <img src="slide3.jpg" alt="img"/>
+                </div>
+                <div class="slide">
+                    <img src="slide4.png" alt="img"/>
+                </div>
+            </div>
+            <BUTTon class="btn1"><a href="page35.html">FACULTY</a></BUTTon>
+            <button class="btn2"><a href="page5.html">DEPARTMENT</a></button>
+            
+        </div>
+    </center>
+</body>
+</html>
